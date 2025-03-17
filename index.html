@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.js"
+        integrity="sha512-k2o1KZdvUi59PUXirfThShW9Gdwtk+jVYum6t7RmyCNAVyF9ozijFpvLEWmpgqkHuqSWpflsLf5+PEW6Lxy/wA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.css"
+        integrity="sha512-wbWvHguVvzF+YVRdi8jOHFkXFpg7Pabs9NxwNJjEEOjiaEgjoLn6j5+rPzEqIwIroYUMxQTQahy+te87XQStuA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Car Dealership</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Car Dealership</h1>
+    <header>
+
+        <div id="MenuBtn" class="fas fa-bars"></div>
+
+        <a href="#" class="logo"><span>L</span>uxury</a>
+
+        <nav class="navbar">
+            <a href="#Home">Начало</a>
+            <a href="#Vehicles">Нови автомобили</a>
+            <a href="#Featured">Автомобили</a>
+            <a href="#Services">Услуги</a>
+            <a href="#Reviews">Ревюта</a>
+            <a href="#Contact">Контакти</a>
+        </nav>
+
+        <div id="LoginBtn">
+            <span class="userName" style="display: none;"></span>
+            <button class="btn">Влизане/Регистрация</button>
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </header>
+
+    <div class="loginformContainer">
+        <span id="CloseLoginForm" class="fas fa-times"></span>
+
+        <form action="">
+            <h3>Влизане в профил</h3>
+            <input type="email" placeholder="Email" required class="box">
+            <input type="password" placeholder="Password" required class="box">
+            <p>Нямате профил? <a href="#" id="showRegister">Натиснете тук</a></p>
+            <button class="btn">Напред</button>
+        </form>
+    </div>
+
+    <div class="registerformContainer">
+        <span id="CloseRegisterForm" class="fas fa-times"></span>
+
+        <form action="">
+            <h3>Регистрация</h3>
+            <input type="email" placeholder="Email" required class="box">
+            <input type="name" placeholder="Your name" required class="box">
+            <input type="password" placeholder="Password" required class="box">
+            <p>Вече имате профил? :<a href="#" id="showLogin">Натиснете тук</a></p>
+            <button class="btn">Напред</button>
+        </form>
+    </div>
+
+    <! -- Home Section -->
+        <section id="Home" class="home">
+            <h3 class="homeParallexEffect">Find Luxury</h3>
+            <img src="images/Test.png" alt="">
+            <a id="carbtn" class="btn">View Cars</a>
+        </section>
+        <! -- Home Section -->
+
+            <! -- Icon Container S -->
+                <selection class="iconsContainer">
+                    <div class="icons">
+                        <i class="fas fa-home"></i>
+
+                        <div class="content">
+                            <h3>15</h3>
+                            <p>Налични автомобили</p>
+                        </div>
+                    </div>
+
+                    <div class="icons">
+                        <i class="fas fa-car"></i>
+
+                        <div class="content">
+                            <h3>500+</h3>
+                            <p>Продадени автомобили</p>
+                        </div>
+                    </div>
+
+                    <div class="icons">
+                        <i class="fas fa-users"></i>
+
+                        <div class="content">
+                            <h3>450+</h3>
+                            <p>Доволни клиенти</p>
+                        </div>
+                    </div>
+
+                    <div class="icons">
+                        <i class="fas fa-car"></i>
+
+                        <div class="content">
+                            <h3>5+</h3>
+                            <p>Нови автомобили</p>
+                        </div>
+                    </div>
+                </selection>
+                <! -- Icon Container E -->
+
+                    <! -- Vehicle Selection S -->
+                        <selection id="Vehicles" class="vehicle">
+                            <h1 class="heading">Нови автомобили в нашата автокъща</h1>
+
+
+                            <div class="swiper VehiclesSlider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide box">
+                                       <a href="car1.html"><img src="images/Car1/Pic1.jpg" alt=""></a> 
+                                        <div class="content">
+                                            <h3>BMW M5 *CARBON</h3>
+                                            <div class="price"><span>Price :</span> 156.000лв</div>
+                                            <p>
+                                                <span class="fa-solid fa-circle"></i></span>600 к.с.
+                                                <span class="fa-solid fa-circle"></i></span>Май 2023
+                                                <span class="fa-solid fa-circle"></i></span>Автоматик
+                                                <span class="fa-solid fa-circle"></i></span>Бензин
+                                                <span class="fa-solid fa-circle"></i></span>43,000km
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide box">
+                                        <a href="car2.html"><img src="images/Car2/Pic1.jpg" alt=""></a> 
+                                        <div class="content">
+                                            <h3>Audi RSQ8</h3>
+                                            <div class="price"><span>Price :</span> 180.000лв</div>
+                                            <p>
+                                                <span class="fa-solid fa-circle"></i></span>600 к.с.
+                                                <span class="fa-solid fa-circle"></i></span>2020
+                                                <span class="fa-solid fa-circle"></i></span>Автоматик
+                                                <span class="fa-solid fa-circle"></i></span>Бензин
+                                                <span class="fa-solid fa-circle"></i></span>87,526 км
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide box">
+                                        <a href="car3.html"><img src="images/Car3/Pic1.jpg" alt=""></a> 
+                                        <div class="content">
+                                            <h3>BMW X7 60i</h3>
+                                            <div class="price"><span>Price :</span> 300.000лв</div>
+                                            <p>
+                                                <span class="fa-solid fa-circle"></i></span>530 к.с.
+                                                <span class="fa-solid fa-circle"></i></span>2025
+                                                <span class="fa-solid fa-circle"></i></span>Автоматик
+                                                <span class="fa-solid fa-circle"></i></span>бензин
+                                                <span class="fa-solid fa-circle"></i></span>3,000км
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide box">
+                                        <a href="car4.html"><img src="images/Car4/Pic1.jpg" alt=""></a> 
+                                        <div class="content">
+                                            <h3>Mercedes CLS AMG 63</h3>
+                                            <div class="price"><span>Price :</span> 180.000лв</div>
+                                            <p>
+                                                <span class="fa-solid fa-circle"></i></span>585 к.с.
+                                                <span class="fa-solid fa-circle"></i></span>2017
+                                                <span class="fa-solid fa-circle"></i></span>Автоматик
+                                                <span class="fa-solid fa-circle"></i></span>Бензин
+                                                <span class="fa-solid fa-circle"></i></span>69.000km
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide box">
+                                        <a href="car5.html"><img src="images/Car5/Pic1.jpg" alt=""></a> 
+                                        <div class="content">
+                                            <h3>Ferrari 488 Pista</h3>
+                                            <div class="price"><span>Price :</span> 980.000лв</div>
+                                            <p>
+                                                <span class="fa-solid fa-circle"></i></span>721 к.с
+                                                <span class="fa-solid fa-circle"></i></span>2019
+                                                <span class="fa-solid fa-circle"></i></span>Автоматик
+                                                <span class="fa-solid fa-circle"></i></span>Бензин
+                                                <span class="fa-solid fa-circle"></i></span>16,000км
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </selection>
+                        <! -- Vehicle Selection E -->
+<! -- Featured Selection S -->
+    <section id="Featured" class="feature">
+
+        <h1 class="heading">Налични автомобили</h1>
+        <div class="swiper FeatureSlider">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="images/Car1/Pic1.jpg" alt="">
+
+                    <div class="content">
+                        <h3>BMW M5 *CARBON*</h3>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="price">$156.000лв/-</div>
+                        <a href="car1.html" class="btn">Buy Now</a>                  
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/Car2/Pic1.jpg" alt="">
+
+                    <div class="content">
+                        <h3>Audi RSQ8</h3>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="price">180.000лв/-</div>
+                        <a href="car2.html" class="btn">Buy Now</a>                  
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/Car3/Pic1.jpg" alt="">
+
+                    <div class="content">
+                        <h3>BMW X7 60i</h3>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="price">300.000лв/-</div>
+                        <a href="car3.html" class="btn">Buy Now</a>                  
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/Car4/Pic1.jpg" alt="">
+
+                    <div class="content">
+                        <h3>Mercedes CLS AMG 63</h3>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="price">180.000лв/-</div>
+                        <a href="car4.html" class="btn">Buy Now</a>                  
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/Car5/Pic1.jpg" alt="">
+
+                    <div class="content">
+                        <h3>Ferrari 488 Pista</h3>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="price">980.000лв/-</div>
+                        <a href="car5.html" class="btn">Buy Now</a>                  
+                    </div>
+                </div>
+            </div>           
+        </div>
+    </section>
+<! -- Featured Selection E -->
+
+<! -- Service Selection S -->
+
+    <section id="Services" class="services">
+
+        <h1 class="heading">Нашите услуги</h1>
+
+        <div class="boxContainer">
+            <div class="box">
+                <i class="fa-solid fa-car"></i>
+                <h3>Продажба на автомобили</h3>
+                <p>Желаете да видите Вашия автомобил в нашия автосалон?</p>
+                <button class="btn" onclick="openForm('form1')">Прочетете повече</button>
+            </div>
+
+            <div class="box">
+                <i class="fa-solid fa-tools"></i>
+                <h3>Поправка</h3>
+                <p>Нуждаете се от надежден майстор?</p>
+                <button class="btn" onclick="openForm('form2')">Прочетете повече</button>
+            </div>
+
+            <div class="box">
+                <i class="fa-solid fa-car-crash"></i>
+                <h3>Автокаско и застраховане</h3>
+                <p>Искате да застраховате Вашия автомобил?</p>
+                <button class="btn" onclick="openForm('form3')">Прочетете повече</button>
+            </div>
+
+            <div class="box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Отключване на екстри</h3>
+                <p>Искате да оключиш екстри за Вашия автомоби?</p>
+                <button class="btn" onclick="openForm('form4')">Прочетете повече</button>
+            </div>
+
+            <div class="box">
+                <i class="fa-solid fa-gas-pump"></i>
+                <h3>Обслужване</h3>
+                <p>Искате да обслужите автомобила Ви в специализиран сервиз?</p>
+                <button class="btn" onclick="openForm('form5')">Прочетете повече</button>
+            </div>
+
+            <div class="box">
+                <i class="fa-solid fa-headset"></i>
+                <h3>24/7 на линия</h3>
+                <p>Нуждаете се от съдействие в късен час?</p>
+                <button class="btn" onclick="openForm('form6')">Прочетете повече</button>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="form-modal" id="form1">
+        <div class="form-container">
+            <span class="close" onclick="closeForm(1)">&times;</span>
+            <h3>Продажба на автомобили</h3>
+            <p>Тук ще бъде информацията относно продажбата на автомобили. Можете да научите повече за нашите предложения и услуги.</p>
+        </div>
+    </div>
+    
+    <div class="form-modal" id="form2">
+        <div class="form-container">
+            <span class="close" onclick="closeForm(2)">&times;</span>
+            <h3>Поправка</h3>
+            <p>Ние предлагаме надеждни ремонти за Вашите автомобили. Нашите майстори ще се погрижат за всяка повреда.</p>
+        </div>
+    </div>
+    
+    <div class="form-modal" id="form3">
+        <div class="form-container">
+            <span class="close" onclick="closeForm(3)">&times;</span>
+            <h3>Автокаско и застраховане</h3>
+            <p>Тук можете да се запознаете с нашите предложения за автокаско и застраховка на автомобила Ви.</p>
+        </div>
+    </div>
+
+<! -- Service Selection E -->
+
+<! -- Reviews Selection S -->
+
+<section id="Reviews" class="reviews">
+    <h1 class="heading">Ревюта от наши клиенти</h1>
+
+    <div class="swiper ReviewSlider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="images/client1.jpg" alt="">
+                <div class="content">
+                    <p>Препоръчвам с 2 ръце и 3 крака. Професионалисти!</p>
+                    <h3>Лека Мелиодас</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images/client2.jpg" alt="">
+                <div class="content">
+                    <p>Не съм спрял да плача от както съм закупил автомобила,
+                         но препоръчвам!</p>
+                    <h3>Джамал Синс</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images/client3.jpg" alt="">
+                <div class="content">
+                    <p>От 3 месеца вместо да ям наливам парите по майстори. 
+                    Коректни продавачи!</p>
+                    <h3>Бричеда Светльо</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images/client4.jpg" alt="">
+                <div class="content">
+                    <p>Жената ме напусна. Това беше най-добора ми покупка!</p>
+                    <h3>Сенж Асенов</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images/client5.jpg" alt="">
+                <div class="content">
+                    <p>Парти буса, втори като него няма!!!</p>
+                    <h3>Анонимен</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images/client6.jpg" alt="">
+                <div class="content">
+                    <p>Пали на бензин, но вместо на газ обръща на масло!</p>
+                    <h3>Степчуна</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<! -- Reviews Selection E -->
+
+<! -- Contact Selection S -->
+
+<section id="Contact" class="contact">
+    <h1 class="heading">Свържете се с нас</h1>
+
+    <div class="row">
+
+
+        <iframe src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Професионална гимазия по Механотехника&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"frameborder="0"></iframe>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <h3>Запазете час</h3>
+            <input type="hidden" name="access_key" value="30fa42f1-7425-47a5-890c-2b430994681d">
+            <input type="text" name="name" placeholder="Вашето име" class="box" required>
+            <input type="email" name="Email" placeholder="Имейл адрес" class="box" required>
+            <input type="phonenumber" name="Phonenum" placeholder="Телефон за връзка" class="box" required>
+            <textarea name="message" placeholder="Вашето събщение" class="box" required></textarea>
+            <button class="btn">Изпрати</button>
+        </form>
+    </div>
+</section>
+
+<! -- Contact Selection E -->
+
+<! -- Footer Start -->
+
+<footer>
+
+    <a href="#">&copy; Дипломна работа на Симеон Бакалов 12а 2024/2025</a>
+
+</footer>
+
+<! -- Footer Start -->
+
+<! -- Theme -->
+
+<div class="themeToggle">
+
+    <div class="ToggleBtn">
+        <i class="fa-solid fa-cog"></i>
+    </div>
+
+    <h3>Choose Color</h3>
+    <div class="buttons">
+
+        <div class="themeBtn" style="background: #0011ff;"></div>
+        <div class="themeBtn" style="background: #ffb404;"></div>
+        <div class="themeBtn" style="background: #2bff00;"></div>
+        <div class="themeBtn" style="background: #fc00dbe6;"></div>
+        <div class="themeBtn" style="background: #cb5805;"></div>
+        <div class="themeBtn" style="background: #ff041d;"></div>
+
+    </div>
+</div>
+
+<! -- Theme -->
+
+</body>
+<script src="/index.js"></script>
+<script>
+    var swiper = new Swiper(".VehiclesSlider", {
+        grabCursor: true,
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        }
+    });
+
+    var swiper = new Swiper(".FeatureSlider", {
+
+        grabCursor: true,
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        }
+    });
+
+    var swiper = new Swiper(".ReviewSlider", {
+        grabCursor: true,
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        }
+    })
+</script>
+</script>
+
+<script>
+    let ThemeToggle = document.querySelector("themeToggle");
+    let ToggleBtn = document.querySelector(".ToggleBtn");
+    
+    ToggleBtn.oneclick = () => {
+        ThemeToggle.classList.toggle("active");
+        Menu.classList.remove("fa-times");
+        Navbar.classList.remove("active");
+    };
+    document.querySelectorAll(".themeToggle .themeBtn").forEach((btn) => {
+        btn.oneclick = () => {
+            let color = btn.style.bachground;
+            document.querySelector(":root").style.setProperty("--main", color)
+        };
+    });
+    </script>
+
+    <script>
+        // Отваря модалната форма според номера
+function openForm(formNumber) {
+    document.getElementById('form' + formNumber).style.display = 'flex';
+}
+
+// Затваря модалната форма според номера
+function closeForm(formNumber) {
+    document.getElementById('form' + formNumber).style.display = 'none';
+}
+
+// Затваря всички форми, когато кликнете извън тях
+window.onclick = function(event) {
+    var modals = document.querySelectorAll('.form-modal');
+    modals.forEach(function(modal) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+}
+
+function openForm(formNumber) {
+    console.log('Отварям форма ' + formNumber);
+    document.getElementById('form' + formNumber).style.display = 'flex';
+}
+
+
+    </script>
+</html> 
+
+

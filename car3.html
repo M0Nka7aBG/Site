@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обява за BMW X7 M60i</title>
+    <link rel="stylesheet" href="carstyle.css">
+</head>
+<body>
+    <!-- Navbar с бутон за назад -->
+    <div class="navbar">
+        <a href="index.html">
+            <button>Назад</button>
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="text-content">
+            <div class="title">BMW X7 M60i *CARBON*</div>
+            <div class="price">300,000лв.</div>
+            <div class="info">
+                <p><strong>Дата на производство:</strong> Януари 2025</p>
+                <p><strong>Гориво:</strong> Бензин</p>
+                <p><strong>Пробег:</strong> 2,500 км</p>
+                <p><strong>Скоростна кутия:</strong> Автоматична</p>
+                <p><strong>Мощност:</strong> 630 к.с.</p>
+                <p><strong>Обем на двигателя:</strong> 4400 см³</p>
+                <p><strong>Брой врати:</strong> 4/5</p>
+                <p><strong>Цвят:</strong> Сив Металик</p>
+                <p><strong>Оборудване:</strong> Mirror cap covers M Carbon<br>
+                    Active seat ventilation in the front<br>
+                    Ambient Air Package<br>
+                    Exterior features: Shadow-Line<br>
+                    Driver assistance system: Driving Assistant Professional<br>
+                    Cargo compartment separation (net)<br>
+                    Interior: Glass applications (CraftedClarity) for controls<br>
+                    Interior: Carbon interior trim<br>
+                    Dashboard leather-wrapped<br>
+                    5-zone climate control with automatic recirculation control<br>
+                    Comfort Package<br>
+                    M Sport Pro Package<br>
+                    Metallic paint<br>
+                    Panoramic roof Sky Lounge (glass, electric front, fixed rear, LED lighting)<br>
+                    Parking Assistant Package Professional<br>
+                    Front seats with massage function<br>
+                    Sun protection glazing (darkened at the rear)<br>
+                    Bowers & Wilkins sound system<br>
+                    Parking heater<br>
+                    Travel and Comfort System<br>
+                    Universal garage door opener<br></p>
+                    
+                    
+                    <p><strong>Екстри:</strong> 3rd seat row<br>
+                        Aerodynamic Package<br>
+                        Aerodynamic Package M-Technic<br>
+                        Airbag driver/passenger side<br>
+                        Ambient lighting<br>
+                        Trailer Stability Program (ASL)<br>
+                        Equipment Package: Connected Professional<br>
+                        Equipment Package: Connected Teaser<br>
+                        Electric folding exterior mirrors<br>
+                        All mirrors with automatic dimming<br>
+                        
+                        И много други
+                        </p>  
+            </div>
+        </div>
+
+        <div class="gallery" id="gallery">
+            <img class="large-image" src="images/Car3/Pic1.jpg" alt="BMW M5" onclick="openModal(this)">
+            <div class="small-images">
+                <img src="images/Car3/Pic2.jpg" alt="BMW M5" onclick="openModal(this)">
+                <img src="images/Car3/Pic3.jpg" alt="BMW M5" onclick="openModal(this)">
+                <img src="images/Car3/Pic4.jpg" alt="BMW M5" onclick="openModal(this)">
+                <img src="images/Car3/Pic5.jpg" alt="BMW M5" onclick="openModal(this)">
+                <img src="images/Car3/Pic6.jpg" alt="BMW M5" onclick="openModal(this)">
+                <img src="images/Car3/Pic7.jpg" alt="BMW M5" onclick="openModal(this)">
+                <img src="images/Car3/Pic8.jpg" alt="BMW M5" onclick="openModal(this)">
+                <img src="images/Car3/Pic9.jpg" alt="BMW M5" onclick="openModal(this)">
+            </div>
+        </div>
+    </div>
+
+    <!-- Модален прозорец за изображение -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modal-image" src="" alt="BMW M5">
+            <!-- Стрелки за навигация -->
+            <button class="nav-button prev" onclick="changeImage(-1)">&#10094;</button>
+            <button class="nav-button next" onclick="changeImage(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        var images = [];
+        var currentIndex = 0;
+
+        // Запълваме масива със снимки
+        function loadImages() {
+            images = [
+                "images/Car3/Pic1.jpg",
+                "images/Car3/Pic2.jpg",
+                "images/Car3/Pic3.jpg",
+                "images/Car3/Pic4.jpg",
+                "images/Car3/Pic5.jpg",
+                "images/Car3/Pic6.jpg",
+                "images/Car3/Pic7.jpg",
+                "images/Car3/Pic8.jpg",
+                "images/Car3/Pic9.jpg"
+            ];
+        }
+
+        function openModal(imgElement) {
+            var modal = document.getElementById("modal");
+            var modalImg = document.getElementById("modal-image");
+            modal.style.display = "flex";
+            modalImg.src = imgElement.src;
+
+            // Намираме текущия индекс на изображението
+            currentIndex = images.indexOf(imgElement.src);
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+
+        // Затваряне на модала ако потребителят кликне извън изображението
+        window.onclick = function(event) {
+            var modal = document.getElementById("modal");
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        function changeImage(direction) {
+            currentIndex += direction;
+
+            // Проверяваме дали текущия индекс е извън границите
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            } else if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+
+            // Променяме изображението в модалния прозорец
+            var modalImg = document.getElementById("modal-image");
+            modalImg.src = images[currentIndex];
+        }
+
+        // Извикваме функцията за зареждане на изображенията
+        loadImages();
+    </script>
+</body>
+</html>

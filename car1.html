@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обява за BMW M5 F90</title>
+    <link rel="stylesheet" href="carstyle.css">
+</head>
+<body>
+    <!-- Navbar с бутон за назад -->
+    <div class="navbar">
+        <a href="index.html">
+            <button>Назад</button>
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="text-content">
+            <div class="title">BMW M5 F90 *CARBON*/HUD/SOFT-CLOSE/</div>
+            <div class="price">156,000лв.</div>
+            <div class="info">
+                <p><strong>Дата на производство:</strong> Май 2023</p>
+                <p><strong>Гориво:</strong> Бензин</p>
+                <p><strong>Пробег:</strong> 43,000 км</p>
+                <p><strong>Скоростна кутия:</strong> Автоматична</p>
+                <p><strong>Мощност:</strong> 600 к.с.</p>
+                <p><strong>Обем на двигателя:</strong> 4400 см³</p>
+                <p><strong>Брой врати:</strong> 4/5</p>
+                <p><strong>Цвят:</strong> Черен Металик</p>
+                <p><strong>Оборудване:</strong> Active seat ventilation in the front,<br>
+                    Exterior Line Aluminium satin BMW Individual<br>
+                    Driver assistance system: BMW gesture control<br>
+                    Driving assistance system: Driving Assistant Professional<br>
+                    Bluetooth hands-free system with extended smartphone connection<br>
+                    Interior: Individual interior trim piano lacquer<br>
+                    Heated steering wheel<br>
+                    M multifunction seats in the front<br>
+                    Smoker's package<br>
+                    Tire repair kit (Mobility Pack)<br>
+                    Headlight laser light<br>
+                    Active Protection safety system<br>
+                    Soft-close automatic doors<br>
+                    Sun protection glazing (darkened at the rear)<br>
+                    Bowers & Wilkins sound system<br>
+                    Socket (12V connection) in center console and trunk/cargo area (4-way)<br>
+                    
+                    <p><strong>Екстри:</strong> 1. Adaptive suspension M-Technic<br>
+                        2. M-Technic aerodynamic package<br>
+                        3. BMW Live Cockpit Professional<br>
+                        4. M sport brakes (brake calipers painted)<br>
+                        5. Driver assistance system: forward collision warning system with braking function<br>
+                        6. Dynamic Traction Control (DTC)<br>
+                        7. Head-up display<br>
+                        8. Active headrests<br>
+                        9. Parking assistant package<br>
+                        10. ConnectedDrive navigation package<br>
+                        И много други
+                        </p>  
+            </div>
+        </div>
+        <div class="gallery" id="gallery">
+            <img class="large-image" src="images/Car1/Pic1.jpg" alt="BMW M5" onclick="openModal(this)">
+            <div class="small-images">
+                <img src="images/Car1/Pic2.jpg" alt="BMW M5" onclick="openModal(this)">
+                <img src="images/Car1/Pic3.jpg" alt="BMW M5" onclick="openModal(this)">
+                <img src="images/Car1/Pic4.jpg" alt="BMW M5" onclick="openModal(this)">
+                <img src="images/Car1/Pic5.jpg" alt="BMW M5" onclick="openModal(this)">
+                <img src="images/Car1/Pic6.jpg" alt="BMW M5" onclick="openModal(this)">
+                <img src="images/Car1/Pic7.jpg" alt="BMW M5" onclick="openModal(this)">
+                <img src="images/Car1/Pic8.jpg" alt="BMW M5" onclick="openModal(this)">
+                <img src="images/Car1/Pic9.jpg" alt="BMW M5" onclick="openModal(this)">
+            </div>
+        </div>
+        <iframe src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Професионална гимазия по Механотехника&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"frameborder="0"></iframe>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <h3>Запазете час</h3>
+            <input type="hidden" name="access_key" value="30fa42f1-7425-47a5-890c-2b430994681d">
+            <input type="text" name="name" placeholder="Вашето име" class="box" required>
+            <input type="email" name="Email" placeholder="Имейл адрес" class="box" required>
+            <input type="phonenumber" name="Phonenum" placeholder="Телефон за връзка" class="box" required>
+            <textarea name="message" placeholder="Вашето събщение" class="box" required></textarea>
+            <button class="btn">Изпрати</button>
+        </form>
+    </div>
+    </div>
+    <!-- Модален прозорец за изображение -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modal-image" src="" alt="BMW M5">
+            <!-- Стрелки за навигация -->
+            <button class="nav-button prev" onclick="changeImage(-1)">&#10094;</button>
+            <button class="nav-button next" onclick="changeImage(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        var images = [];
+        var currentIndex = 0;
+
+        // Запълваме масива със снимки
+        function loadImages() {
+            images = [
+                "images/Car1/Pic1.jpg",
+                "images/Car1/Pic2.jpg",
+                "images/Car1/Pic3.jpg",
+                "images/Car1/Pic4.jpg",
+                "images/Car1/Pic5.jpg",
+                "images/Car1/Pic6.jpg",
+                "images/Car1/Pic7.jpg",
+                "images/Car1/Pic8.jpg",
+                "images/Car1/Pic9.jpg"
+            ];
+        }
+
+        function openModal(imgElement) {
+            var modal = document.getElementById("modal");
+            var modalImg = document.getElementById("modal-image");
+            modal.style.display = "flex";
+            modalImg.src = imgElement.src;
+
+            // Намираме текущия индекс на изображението
+            currentIndex = images.indexOf(imgElement.src);
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+
+        // Затваряне на модала ако потребителят кликне извън изображението
+        window.onclick = function(event) {
+            var modal = document.getElementById("modal");
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        function changeImage(direction) {
+            currentIndex += direction;
+
+            // Проверяваме дали текущия индекс е извън границите
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            } else if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+
+            // Променяме изображението в модалния прозорец
+            var modalImg = document.getElementById("modal-image");
+            modalImg.src = images[currentIndex];
+        }
+
+        // Извикваме функцията за зареждане на изображенията
+        loadImages();
+    </script>
+</body>
+</html>
