@@ -307,68 +307,130 @@
                 <i class="fa-solid fa-car"></i>
                 <h3>Продажба на автомобили</h3>
                 <p>Желаете да видите Вашия автомобил в нашия автосалон?</p>
-                <button class="btn" onclick="openForm('form1')">Прочетете повече</button>
+                <button class="btn" onclick="openServiceModal('service1')">Прочетете повече</button>
             </div>
 
             <div class="box">
                 <i class="fa-solid fa-tools"></i>
                 <h3>Поправка</h3>
                 <p>Нуждаете се от надежден майстор?</p>
-                <button class="btn" onclick="openForm('form2')">Прочетете повече</button>
+                <button class="btn" onclick="openServiceModal('service2')">Прочетете повече</button>
             </div>
 
             <div class="box">
                 <i class="fa-solid fa-car-crash"></i>
                 <h3>Автокаско и застраховане</h3>
                 <p>Искате да застраховате Вашия автомобил?</p>
-                <button class="btn" onclick="openForm('form3')">Прочетете повече</button>
+                <button class="btn" onclick="openServiceModal('service3')">Прочетете повече</button>
             </div>
 
             <div class="box">
                 <i class="fa-solid fa-code"></i>
                 <h3>Отключване на екстри</h3>
-                <p>Искате да оключиш екстри за Вашия автомоби?</p>
-                <button class="btn" onclick="openForm('form4')">Прочетете повече</button>
+                <p>Искате да отключите екстри за Вашия автомобил?</p>
+                <button class="btn" onclick="openServiceModal('service4')">Прочетете повече</button>
             </div>
 
             <div class="box">
                 <i class="fa-solid fa-gas-pump"></i>
                 <h3>Обслужване</h3>
                 <p>Искате да обслужите автомобила Ви в специализиран сервиз?</p>
-                <button class="btn" onclick="openForm('form5')">Прочетете повече</button>
+                <button class="btn" onclick="openServiceModal('service5')">Прочетете повече</button>
             </div>
 
             <div class="box">
                 <i class="fa-solid fa-headset"></i>
                 <h3>24/7 на линия</h3>
                 <p>Нуждаете се от съдействие в късен час?</p>
-                <button class="btn" onclick="openForm('form6')">Прочетете повече</button>
+                <button class="btn" onclick="openServiceModal('service6')">Прочетете повече</button>
             </div>
         </div>
     </section>
 
 
-    <div class="form-modal" id="form1">
-        <div class="form-container">
-            <span class="close" onclick="closeForm(1)">&times;</span>
+    <div class="service-modal" id="service1">
+        <span class="close" onclick="closeServiceModal('service1')">&times;</span>
+        <div class="content">
             <h3>Продажба на автомобили</h3>
-            <p>Тук ще бъде информацията относно продажбата на автомобили. Можете да научите повече за нашите предложения и услуги.</p>
+            <p>Ние предлагаме широка гама от луксозни автомобили. Нашият екип от професионалисти ще ви помогне да намерите точно това, което търсите. Предлагаме:</p>
+            <p>- Разнообразие от марки и модели<br>
+               - Професионална консултация<br>
+               - Гъвкави възможности за финансиране<br>
+               - Пълно съдействие при сделката</p>
         </div>
     </div>
     
-    <div class="form-modal" id="form2">
-        <div class="form-container">
-            <span class="close" onclick="closeForm(2)">&times;</span>
+    <div class="service-modal" id="service2">
+        <span class="close" onclick="closeServiceModal('service2')">&times;</span>
+        <div class="content">
             <h3>Поправка</h3>
-            <p>Ние предлагаме надеждни ремонти за Вашите автомобили. Нашите майстори ще се погрижат за всяка повреда.</p>
+            <p>Нашият сервиз разполага с най-модерното оборудване и квалифицирани специалисти. Предлагаме:</p>
+            <p>- Диагностика на автомобили<br>
+               - Ремонт на двигатели<br>
+               - Ремонт на скоростни кутии<br>
+               - Обслужване на климатични системи</p>
         </div>
     </div>
     
-    <div class="form-modal" id="form3">
-        <div class="form-container">
-            <span class="close" onclick="closeForm(3)">&times;</span>
+    <div class="service-modal" id="service3">
+        <span class="close" onclick="closeServiceModal('service3')">&times;</span>
+        <div class="content">
             <h3>Автокаско и застраховане</h3>
-            <p>Тук можете да се запознаете с нашите предложения за автокаско и застраховка на автомобила Ви.</p>
+            <p>Предлагаме пълна гама от застрахователни услуги за вашия автомобил:</p>
+            <p>- Пълно КАСКО застраховане<br>
+               - Гражданска отговорност<br>
+               - Застраховка "Злополука" на водача и пътниците<br>
+               - Помощ на пътя в България и чужбина<br>
+               - Защита при природни бедствия<br>
+               - Покритие при кражба и грабеж</p>
+            <p>Работим с водещи застрахователни компании и предлагаме най-изгодните условия за нашите клиенти. Консултирайте се с нашите експерти за индивидуално решение.</p>
+        </div>
+    </div>
+
+    <div class="service-modal" id="service4">
+        <span class="close" onclick="closeServiceModal('service4')">&times;</span>
+        <div class="content">
+            <h3>Отключване на екстри</h3>
+            <p>Нашите специалисти могат да отключат и активират допълнителни екстри във вашия автомобил. Предлагаме:</p>
+            <p>- Активиране на скрити функции<br>
+               - Кодиране на нови функционалности<br>
+               - Персонализиране на настройките<br>
+               - Актуализация на софтуера<br>
+               - Диагностика на системите<br>
+               - Премахване на ограничения</p>
+            <p>Работим с всички популярни марки автомобили и използваме най-съвременно оборудване за кодиране.</p>
+        </div>
+    </div>
+
+    <div class="service-modal" id="service5">
+        <span class="close" onclick="closeServiceModal('service5')">&times;</span>
+        <div class="content">
+            <h3>Обслужване</h3>
+            <p>Предлагаме пълно обслужване на вашия автомобил в нашия специализиран сервиз:</p>
+            <p>- Смяна на масла и филтри<br>
+               - Проверка на спирачна система<br>
+               - Обслужване на климатична система<br>
+               - Диагностика на двигател<br>
+               - Смяна на ремъци и ролки<br>
+               - Проверка на окачване<br>
+               - Смяна на спирачни накладки и дискове</p>
+            <p>Използваме само оригинални части и консумативи от доказани производители.</p>
+        </div>
+    </div>
+
+    <div class="service-modal" id="service6">
+        <span class="close" onclick="closeServiceModal('service6')">&times;</span>
+        <div class="content">
+            <h3>24/7 на линия</h3>
+            <p>Нашият екип е на разположение денонощно, за да ви окаже помощ при нужда:</p>
+            <p>- Пътна помощ 24/7<br>
+               - Аварийно отключване<br>
+               - Подаване на ток<br>
+               - Смяна на гуми<br>
+               - Теглене на автомобили<br>
+               - Транспортиране до сервиз<br>
+               - Консултация по телефона</p>
+            <p>Свържете се с нас по всяко време на денонощието на телефон: +359 888 123 456</p>
         </div>
     </div>
 
@@ -621,7 +683,6 @@
         }
     })
 </script>
-</script>
 
 <script>
     let ThemeToggle = document.querySelector("themeToggle");
@@ -642,31 +703,20 @@
 
     <script>
         // Отваря модалната форма според номера
-function openForm(formNumber) {
-    document.getElementById('form' + formNumber).style.display = 'flex';
+function openServiceModal(modalId) {
+    document.getElementById(modalId).classList.add('active');
 }
 
-// Затваря модалната форма според номера
-function closeForm(formNumber) {
-    document.getElementById('form' + formNumber).style.display = 'none';
+function closeServiceModal(modalId) {
+    document.getElementById(modalId).classList.remove('active');
 }
 
-// Затваря всички форми, когато кликнете извън тях
+// Затваряне при клик извън модалния прозорец
 window.onclick = function(event) {
-    var modals = document.querySelectorAll('.form-modal');
-    modals.forEach(function(modal) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
+    if (event.target.classList.contains('service-modal')) {
+        event.target.classList.remove('active');
+    }
 }
-
-function openForm(formNumber) {
-    console.log('Отварям форма ' + formNumber);
-    document.getElementById('form' + formNumber).style.display = 'flex';
-}
-
-
     </script>
 </html> 
 

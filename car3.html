@@ -7,12 +7,10 @@
     <link rel="stylesheet" href="carstyle.css">
 </head>
 <body>
-    <!-- Navbar с бутон за назад -->
-    <div class="navbar">
-        <a href="index.html">
-            <button>Назад</button>
-        </a>
-    </div>
+    <header>
+        <div id="MenuBtn" class="fas fa-bars"></div>
+        <a href="index.html" class="logo"><span>L</span>uxury</a>
+    </header>
 
     <div class="container">
         <div class="text-content">
@@ -79,6 +77,22 @@
                 <img src="images/Car3/Pic9.jpg" alt="BMW M5" onclick="openModal(this)">
             </div>
         </div>
+
+        <div class="contact-section">
+            <div class="map-container">
+                <iframe src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Професионална гимазия по Механотехника&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </div>
+
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact">
+                <h3>Направете запитване</h3>
+                <input type="hidden" name="access_key" value="30fa42f1-7425-47a5-890c-2b430994681d">
+                <input type="text" name="name" placeholder="Вашето име" class="box" required>
+                <input type="email" name="Email" placeholder="Имейл адрес" class="box" required>
+                <input type="phonenumber" name="Phonenum" placeholder="Телефон за връзка" class="box" required>
+                <textarea name="message" placeholder="Вашето запитване" class="box" required></textarea>
+                <button class="btn">Изпрати</button>
+            </form>
+        </div>
     </div>
 
     <!-- Модален прозорец за изображение -->
@@ -113,8 +127,10 @@
 
         function openModal(imgElement) {
             var modal = document.getElementById("modal");
-            var modalImg = document.getElementById("modal-image");
+            var header = document.querySelector('header'); // Намиране на header елемента
             modal.style.display = "flex";
+            header.classList.add('hidden'); // Скриване на навигационната лента
+            var modalImg = document.getElementById("modal-image");
             modalImg.src = imgElement.src;
 
             // Намираме текущия индекс на изображението
@@ -123,7 +139,9 @@
 
         function closeModal() {
             var modal = document.getElementById("modal");
+            var header = document.querySelector('header'); // Намиране на header елемента
             modal.style.display = "none";
+            header.classList.remove('hidden'); // Показване на навигационната лента
         }
 
         // Затваряне на модала ако потребителят кликне извън изображението

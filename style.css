@@ -744,3 +744,63 @@ color: black;
     color: var(--main);
     cursor: pointer;
 }
+
+/* Стилове за Services модалните прозорци */
+.service-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+}
+
+.service-modal.active {
+    display: flex;
+}
+
+.service-modal .content {
+    margin: 2rem;
+    border: var(--border);
+    box-shadow: var(--box_shadow);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    width: 40rem;
+    background: #fff;
+}
+
+.service-modal .content h3 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    color: var(--main);
+}
+
+.service-modal .content p {
+    font-size: 1.6rem;
+    color: #000;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.service-modal .close {
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    cursor: pointer;
+    color: var(--main);
+}
+
+.service-modal .divider {
+    height: 2px;
+    background: var(--main);
+    margin: 15px auto;
+    width: 80%;
+    opacity: 0.3;
+}
